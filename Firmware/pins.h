@@ -320,6 +320,94 @@
 #endif
 
 
+/*****************************************************************
+* RAMPS 1.4 Pin Assignments 1.0
+******************************************************************/
+
+#if MOTHERBOARD == 43
+#define ELECTRONICS "RAMPS14"
+
+#define KNOWN_BOARD
+
+#ifndef __AVR_ATmega2560__
+    #error Oops!  Make sure you have 'Arduino Mega 2560' selected from the 'Tools -> Boards' menu.
+#endif
+#define FR_SENS 4
+#define X_STEP_PIN 54
+#define X_DIR_PIN 55
+#define X_MIN_PIN 3
+#define X_MAX_PIN 2
+
+
+#define X_ENABLE_PIN 38
+#define Y_STEP_PIN 60
+#define Y_DIR_PIN 61
+#define Y_MIN_PIN 14
+#define Y_MAX_PIN 15
+
+
+#define Y_ENABLE_PIN 56
+#define Z_STEP_PIN 46
+#define Z_DIR_PIN 48
+#define Z_MIN_PIN 18
+#define Z_MAX_PIN 19
+#define Z_ENABLE_PIN 62
+
+
+#define TEMP_BED_PIN 14   // ANALOG NUMBERING
+#define TEMP_0_PIN 13   // ANALOG NUMBERING
+#define HEATER_1_PIN -1
+#define TEMP_1_PIN 15   // ANALOG NUMBERING
+#define TEMP_2_PIN -1   // ANALOG NUMBERING
+
+// The SDSS pin uses a different pin mapping from file Sd2PinMap.h
+#define SDSS 53
+
+#ifndef SDSUPPORT
+  // these pins are defined in the SD library if building with SD support
+  #define SCK_PIN 52
+  #define MISO_PIN 50
+  #define MOSI_PIN 51
+#endif
+
+#define E0_STEP_PIN 26
+#define E0_DIR_PIN 28
+#define E0_ENABLE_PIN 24
+
+
+#define LED_PIN 13
+
+#define FAN_PIN 9 // (Sprinter config)
+
+
+
+
+
+#define KILL_PIN -1 // 41 with Smart Controller LCD
+#define SUICIDE_PIN -1  //PIN that has to be turned on right after start, to keep power flowing.
+#define SDPOWER -1
+
+
+#define HEATER_2_PIN -1
+
+#define BEEPER 37
+#define BTN_EN1 31
+#define BTN_EN2 33
+#define BTN_ENC 35
+#define SD_DETECT_PIN 49
+#define LCD_PINS_RS 16
+#define LCD_PINS_ENABLE 17
+#define LCD_PINS_D4 23
+#define LCD_PINS_D5 25
+#define LCD_PINS_D6 27
+#define LCD_PINS_D7 29
+#define HEATER_0_PIN 10
+#define HEATER_BED_PIN 8    // BED
+#define FAN_1_PIN -1           //6
+#define PS_ON_PIN 12
+
+
+#endif   // End RAMPS 1.4 Pin Assignments
 
 
 
